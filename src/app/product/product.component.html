@@ -1,0 +1,50 @@
+<app-header></app-header>
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div class="row">
+                <h2 style="background-color: rgb(201, 248, 201); " align="middle">Products Available</h2>
+                <div >
+                    <!-- <div class="product-box"> -->
+
+                    <!-- <a routerLink="/products/{{ tempProduct.id }}">
+                            <img src="{{ tempProduct.image }}" class="img-responsive">
+                        </a> -->
+                    <table>
+                        <tr>
+                            <th>Product</th>
+                            <th>Name</th>
+                            <th>Brand</th>
+                            <th>Description</th>
+                            <th>MRP</th>
+                            <th>stock</th>
+                            <th>Action</th>
+                            
+                            
+                        </tr>
+                        <tr *ngFor="let tempProduct of products" class="col-md-3">
+                            <!-- <td></td> -->
+                            <td><img style="display:block;" width="100%" height="100%" src="assets/dairymilk.png" /></td>
+                            <td>{{ tempProduct.name }}</td>
+                            <td>{{ tempProduct.brand }}</td>
+                            <td>{{ tempProduct.description }}</td>
+                            <td>{{ tempProduct.mrp |currency :'INR'}}</td>
+                            <td>{{ tempProduct.stock }}</td>
+                           
+                            <td>
+                                
+                                <a class="button" routerLink= "/order">ADD Order</a>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+
+            <!-- if products empty then display a message-->
+            <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
+                No products found.
+            </div>
+
+        </div>

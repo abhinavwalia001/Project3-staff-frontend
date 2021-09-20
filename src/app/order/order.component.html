@@ -1,0 +1,230 @@
+<app-header></app-header>
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card" style="width: 90%;" *ngFor="let order of orders">
+          <div class="card-body">
+            <div class="col-sm-12 bg-light p-3 border rounded">
+              <div class="hstack gap-5">
+                <div class="bg-light">
+                  Order Placed 
+                  <div>{{ order.date }}</div>
+                </div>
+                <div>
+                  <div class="bg-light">
+                    Total
+                    <div>{{ order.totalPrice }}</div>
+                  </div>
+                </div>
+                <div class="bg-light dropdown">
+                  Ordered by
+  
+                  <div>{{ order.customer.name }}</div>
+                </div>
+                <div class="bg-light ms-auto">
+                  Order # 407-6144536-067956{{ order.id }}
+                </div>
+              </div>
+            </div>
+
+            <div class="card mb-3" style="max-width: 80%;">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <a [routerLink]="['/order', '{{order.id}}']">
+                    <img
+                      src="https://images-eu.ssl-images-amazon.com/images/I/41HEGfr5rRL._SX300_SY300_QL70_FMwebp_.jpg"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    />
+                  </a>
+                </div> -->
+            <!-- <div
+              class="
+                shadow-none
+                p-3
+                mb-5
+                bg-light
+                rounded
+                d-flex
+                flex-wrap
+                justify-content-between
+              "
+            >
+              <div class="card mb-3" style="max-width: 80%;">
+                <div class="row g-0">
+                  <div class="col-md-4">
+                    <a [routerLink]="['/order', '{{order.id}}']">
+                      <img
+                        src="https://images-eu.ssl-images-amazon.com/images/I/41HEGfr5rRL._SX300_SY300_QL70_FMwebp_.jpg"
+                        class="img-fluid rounded-start"
+                        alt="..."
+                      />
+                    </a>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h5 class="card-title">
+                        {{ order.id }}
+                      </h5>
+                      <p class="card-text">Order placed on on {{ order.date }}</p>
+  
+                      <p class="card-text">
+                        <small class="text-muted">{{ order.status }}</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="">
+                <a
+                  class="btn-outline-secondary btn"
+                  [routerLink]="['/order', '{{order.id}}']"
+                >
+                  View Order </a
+                ><br /><br />
+                <span style="width: 100%;"
+                  ><a href="#" class="btn-outline-secondary btn">
+                    <span style="width: 100%;">Invoice</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <!--<form [formGroup]= "OrderDetailsForm" #saveCustomerOrder (ngSubmit)=saveOrderDetails()>
+  <div class="container">
+
+
+    <h1 > Order Details</h1>
+
+    <hr>
+    <label for="date"><b>Date</b></label>
+    <input type="date" placeholder="Enter date" name="date" formControlName="date" id="date" required>
+    <br>
+
+
+    <label for="name"><b>total_price</b></label>
+    <input type="number" placeholder="totalPrice" name="totalPrice" formControlName="date" id="date" required>
+    <br>
+
+    <label for="discount"><b>Discount</b></label>
+    <input type="number" placeholder="Enter discount" name="discount" formControlName="discount" id="discount" required>
+    <br>
+
+    <label for="modeOfPayment"><b>ModeOfPayment</b></label>
+    <input type="text" placeholder="Enter modeOfPayment" name="modeOfPayment" formControlName="modeOfPayment" id="modeOfPayment" required>
+    <br>
+  
+    <label for="status"><b>Status</b></label>
+    <input type="text" placeholder="Enter status" name="status" formControlName="status" id="status" required>
+    <br>
+
+    <h2>Customer Details</h2>
+    <hr>
+    <label for="name"><b>Name</b></label>
+    <input type="text" placeholder="Enter name" name="totalPrice" formControlName="totalPrice" id="name" required>
+
+    <label for="contact_no"><b>Contact_no</b></label>
+    <input type="text" placeholder="Enter Contact_no" name="discount"  formControlName="discount" id="contact_no" required>
+    <br>
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="modeOfPayment" formControlName="email" id="email" required>
+    
+
+    <br>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="status" formControlName="status" id="psw" required>
+
+ 
+    <label for="addressLine"><b>Address line</b></label>
+    <input type="text" placeholder="Enter address line" name="addressLine"  formControlName="tracking" id="addressLine" required>
+
+    <label for="city"><b>City</b></label>
+    <input type="text" placeholder="Enter city" name="city"  formControlName="city" id="city" required>
+    <label for="pinCode"><b>Pincode</b></label>
+    <input type="text" placeholder="Enter pinCode" name="pinCode"  formControlName="pinCode" id="pinCode" required>
+
+   
+
+    <label for="state">State: &nbsp;&nbsp;&nbsp;</label>
+
+<select name="state" id="state">
+  <option value="tamilnadu">tamilnadu</option>
+  <option value="tamilnadu">MP</option>
+  <option value="tamilnadu">UP</option>
+  <option value="tamilnadu">punjab</option>
+  <option value="tamilnadu">Delhi</option>
+  <option value="tamilnadu">WB</option>
+  <option value="tamilnadu">AP</option>
+ 
+ 
+</select>
+<br>
+<br>
+
+    <label for="country">country: &nbsp;&nbsp;&nbsp;</label>
+
+<select name="country" id="country">
+  <option value="India">India</option>
+  <option value="Pakistan">Pakistan</option>
+  <option value="China">China</option>
+ 
+</select>
+<br>
+<br>
+
+    <button type="submit" class="registerbtn">Proceed</button>
+  </div>
+</form>-->
+
+<!-- </body>
+</html> -->
+
+<h2 align="middle" style="background-color:rgb(201, 248, 201);">Order Details</h2>
+<table>
+    <tr>
+        <th>Order Id</th>
+        <th>Order Placed on</th>
+        <th>Ordered By</th>
+        <th>Total Price</th>
+        <th>product image</th>
+        <th>Action</th>
+        <th></th>
+        
+    </tr>
+    <tr *ngFor="let order of orders">
+        <td>#7389273hhe{{order.id}}</td>
+        <td>{{order.date}}</td>
+        <td>{{order.customer.name}}</td>
+        <td>{{order.totalPrice}}</td>
+        <td><img
+                      src="https://images-eu.ssl-images-amazon.com/images/I/41HEGfr5rRL._SX300_SY300_QL70_FMwebp_.jpg"
+                      class="img-fluid rounded-start"
+                      alt="..."
+                    /></td>
+
+                    <td><button class="button button4" routerLink= "/viewdetails">View details</button></td>
+
+              
+                    <td><button class="button button4" routerLink= "/viewdetails">View Invoice</button></td>
+       
+    </tr>
+</table>
+
+
+
+
+

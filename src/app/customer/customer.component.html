@@ -1,0 +1,28 @@
+
+<app-header></app-header>
+<h2 align="middle" style="background-color:rgb(201, 248, 201);">Customer Details</h2>
+<table>
+    <tr>
+        <th>Phone Number</th>
+        <th>Email</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Action</th>
+    </tr>
+    <tr *ngFor="let customer of customers">
+        <td>{{customer.phoneNumber}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.name}}</td>
+        <td>{{customer.addresses[0].addressLine}}</td>
+        <!-- <td><button class="button button4" routerLink= "/addorder">ADD ORDER</button></td> -->
+
+       <td> <button class="button button4" (click) = "addOrder(customer.phoneNumber)" >Add Order</button></td>
+
+       
+    </tr>
+</table>
+
+
+
+
+

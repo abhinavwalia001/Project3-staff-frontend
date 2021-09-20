@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+
+  <form [formGroup]  CustomerAddressForm #saveCustomerAddress (ngSubmit)=onSubmit()>
+  <div class="container">
+    <h1 > Address Details</h1>
+    
+    <hr>
+    <label for="address"><b>Address Line</b></label>
+    <input type="text" placeholder="Enter valid Address" name="addressLine" formControlName="addressLine" id="address" required>
+
+    <label for="city"><b>City Name</b></label>
+    <input type="text" placeholder="Enter valid cityname" name="city"  formControlName="city" id="city" required>
+    <br>
+    <label for="pin"><b>Pincode</b></label>
+    <input type="number" placeholder="Enter valid pincode" name="pinCode" formControlName="pinCode" id="pin" required>
+    
+    <br>
+
+    <button type="submit" class="registerbtn">Save & finish</button>
+  </div>
+</form>
+</body>
+</html>

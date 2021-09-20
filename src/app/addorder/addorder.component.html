@@ -1,0 +1,29 @@
+<app-header></app-header>
+
+
+<div style="
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+width: 1000px;
+height: 100px;
+margin: auto;">
+<label for="product"><b> Choose a Product</b>: &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;</label>
+<select name="products" id="products">
+      <option *ngFor='let tempProduct of products' value="{{ tempProduct.name }}">{{tempProduct.name}}</option> 
+          
+   
+</select>
+<br>
+<br>
+  <label for="quantity"><b>Quantity</b></label>
+  <input type="number" placeholder="enter Quantity" name="Quantity" formControlName="Quantity" id="quantity" required>
+  <br>
+  <td><button class="button button4">ADD ITEM</button></td>
+
+</div>
+
+
+

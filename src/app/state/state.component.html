@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>List of States of Selected Country</h1>
+<form [formGroup] = "StateDetailsForm" #stateList (ngSubmit)=getStateListOfCountry()>
+  <label >Choose your state from the list</label>
+
+      <select (focus)="getStateList()"
+      formControlName="StateDetailsFrom"  name="stateName" required>
+        <option *ngFor="let s in stateList" [ngValue]="s">
+            {{ s.stateName }}
+        </option>
+      </select>
+
+  <input type="submit" value="Next">
+</form>
+<p><strong>Note:</strong> Once the State is selected it cannnot be modified.</p>
+</body>
+</html>
